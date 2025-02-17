@@ -166,6 +166,44 @@ namespace HQSP_Assignment_2_Task_2
                 customer.DisplayInfo();
                 Console.WriteLine("---------------------------------------------------------------------------");
             }
+
+            static ICustomer CreateCustomer()
+            {
+                string name = GetValidatedInput("Enter customer name : ",
+                    @"^[A-Za-z]+$", "Invalid Input.Name should contain only letters.");
+
+                string buildingType = GetValidatedInput("Enter building type (house or barn or garage): ",
+                    @"^(house|barn|garage)$", "Invalid Input.Building type should be either 'house' or 'barn' or 'garage'.");
+
+                int size = int.Parse(GetValidatedInput("Enter size (1000 sq.ft. to 50000 sq. ft.): ",
+                    @"^\d{4,5}$", "Invalid Input.Size should range from 1000 and 50000 sq. ft."));
+
+                int lightBulbs = int.Parse(GetValidatedInput("Enter number of light bulbs (1 - 20): ",
+                    @"^([1-9]|1[0-9]|20)$", "Invalid Input.Light bulbs must be between 1 and 20."));
+
+                int outlets = int.Parse(GetValidatedInput("Enter number of outlets (1 - 50): ",
+                    @"^([1-9]|[1-4][0-9]|50)$", "Invalid Input.Outlets must be between 1 and 50."));
+
+                string creditCard = GetValidatedInput("Enter 16 digit credit card number : ",
+                    @"^\d{16}$", "Invalid Input.Credit card should have exact 16 digits.");
+
+                ICustomer customer = buildingType switch
+                {
+                    "house" => new HouseCustomer(),
+                    "barn" => new BarnCustomer(),
+                    "garage" => new GarageCustomer(),
+                    _ => throw new ArgumentException("Invalid building type")
+                };
+
+                customer.Name = name;
+                customer.BuildingType = buildingType;
+                customer.Size = size;
+                customer.LightBulbs = lightBulbs;
+                customer.Outlets = outlets;
+                customer.CreditCard = creditCard;
+
+                return customer;
+            }
         }
     }
 }
