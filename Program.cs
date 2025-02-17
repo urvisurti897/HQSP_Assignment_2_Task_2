@@ -204,6 +204,22 @@ namespace HQSP_Assignment_2_Task_2
 
                 return customer;
             }
+
+            static string GetValidatedInput(string prompt, string pattern, string errorMessage)
+            {
+                string input;
+                do
+                {
+                    Console.Write(prompt);
+                    input = Console.ReadLine().Trim();
+                    if (!IsValidInput(input, pattern))
+                    {
+                        Console.WriteLine(errorMessage);
+                    }
+                } while (!IsValidInput(input, pattern));
+
+                return input;
+            }
         }
     }
 }
