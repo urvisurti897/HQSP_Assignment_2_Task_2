@@ -146,6 +146,17 @@ namespace HQSP_Assignment_2_Task_2
         {
             List<ICustomer> customers = new List<ICustomer>();
             string input;
+
+            do
+            {
+                ICustomer customer = CreateCustomer();
+
+                customers.Add(customer);
+
+                Console.Write("\nWould you like to add another customer? (yes/no): ");
+                input = Console.ReadLine().ToLower();
+            } while (input == "yes");
         }
+
     }
 }
