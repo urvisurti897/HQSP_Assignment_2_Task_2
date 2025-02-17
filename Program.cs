@@ -116,6 +116,30 @@ namespace HQSP_Assignment_2_Task_2
         }
     }
 
+    class HouseCustomer : CustomerBase
+    {
+        public override void SpecificTask()
+        {
+            Console.WriteLine($"{Name}: Installing fire alarms.");
+        }
+    }
+
+    class BarnCustomer : CustomerBase
+    {
+        public override void SpecificTask()
+        {
+            Console.WriteLine($"{Name}: Wiring milking equipment.");
+        }
+    }
+
+    class GarageCustomer : CustomerBase
+    {
+        public override void SpecificTask()
+        {
+            Console.WriteLine($"{Name}: Installing automatic doors.");
+        }
+    }
+
     internal class Program
     {
         static void Main(string[] args)
