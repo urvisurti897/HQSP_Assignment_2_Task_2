@@ -220,6 +220,11 @@ namespace HQSP_Assignment_2_Task_2
 
                 return input;
             }
+
+            static bool IsValidInput(string input, string pattern)
+            {
+                return Regex.IsMatch(input, pattern);
+            }
         }
     }
 }
