@@ -144,7 +144,8 @@ namespace HQSP_Assignment_2_Task_2
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Hello, World!");
+            List<ICustomer> customers = new List<ICustomer>();
+            string input;
         }
     }
 }
