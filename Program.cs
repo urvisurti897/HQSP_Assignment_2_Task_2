@@ -150,13 +150,22 @@ namespace HQSP_Assignment_2_Task_2
             do
             {
                 ICustomer customer = CreateCustomer();
-
                 customers.Add(customer);
-
                 Console.Write("\nWould you like to add another customer? (yes/no): ");
                 input = Console.ReadLine().ToLower();
             } while (input == "yes");
-        }
 
+            Console.WriteLine("\nCustomer Information:");
+            Console.WriteLine("************************\n");
+
+            foreach (var customer in customers)
+            {
+                customer.CreateWiringSchema();
+                customer.PurchaseParts();
+                customer.SpecificTask();
+                customer.DisplayInfo();
+                Console.WriteLine("---------------------------------------------------------------------------");
+            }
+        }
     }
 }
