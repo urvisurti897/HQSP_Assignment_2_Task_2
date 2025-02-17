@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HQSP_Assignment_2_Task_2", "HQSP_Assignment_2_Task_2.csproj", "{A8D02818-8003-44E2-A558-7B3EB8E3231B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8D02818-8003-44E2-A558-7B3EB8E3231B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8D02818-8003-44E2-A558-7B3EB8E3231B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8D02818-8003-44E2-A558-7B3EB8E3231B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8D02818-8003-44E2-A558-7B3EB8E3231B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F380D854-B51E-485E-9BB3-5E548C07076E}
+	EndGlobalSection
+EndGlobal
